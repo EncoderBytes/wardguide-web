@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 // Assets
-import ContactImg1 from "../../assets/img/contact-1.png";
-import ContactImg2 from "../../assets/img/contact-2.png";
-import ContactImg3 from "../../assets/img/contact-3.png";
+import ContactImg1 from "../../assets/img/logo192.png";
+import ContactImg2 from "../../assets/img/Mobile-06.jpg";
+import ContactImg3 from "../../assets/img/Mobile-10.jpg";
 
 export default function Contact() {
   return (
@@ -36,15 +36,15 @@ export default function Contact() {
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 flex">
               <div style={{ width: "50%" }} className="flexNullCenter flexColumn">
                 <ContactImgBox>
-                  <img src={ContactImg1} alt="office" className="radius6" />
+                  <img src={ContactImg1} style={{ width: '11rem' }} alt="office" className="radius6" />
                 </ContactImgBox>
                 <ContactImgBox>
-                  <img src={ContactImg2} alt="office" className="radius6" />
+                  <img src={ContactImg2} style={{ width: '11rem' }} alt="office" className="radius6" />
                 </ContactImgBox>
               </div>
               <div style={{ width: "50%" }}>
                 <div style={{ marginTop: "100px" }}>
-                  <img src={ContactImg3} alt="office" className="radius6" />
+                  <img src={ContactImg3} style={{ width: '15rem' }} alt="office" className="radius6" />
                 </div>
               </div>
             </div>
@@ -85,15 +85,15 @@ const Form = styled.form`
   }
 `;
 const ButtonInput = styled.input`
-  border: 1px solid #7620ff;
-  background-color: #7620ff;
+  border: 1px solid #5149C3;
+  background-color: #5149C3;
   width: 100%;
   padding: 15px;
   outline: none;
   color: #fff;
   :hover {
     background-color: #580cd2;
-    border: 1px solid #7620ff;
+    border: 1px solid #5149C3;
     color: #fff;
   }
   @media (max-width: 991px) {

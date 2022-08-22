@@ -5,10 +5,10 @@ import styled from "styled-components";
 import ServiceBox from "../Elements/ServiceBox";
 import FullButton from "../Buttons/FullButton";
 // Assets
-import AddImage1 from "../../assets/img/add/1.png";
-import AddImage2 from "../../assets/img/add/2.png";
-import AddImage3 from "../../assets/img/add/3.png";
-import AddImage4 from "../../assets/img/add/4.png";
+import AddImage1 from "../../assets/img/Mobile-07.jpg";
+import AddImage2 from "../../assets/img/Mobile-08.jpg";
+import AddImage3 from "../../assets/img/logo192.png";
+import AddImage4 from "../../assets/img/Mobile-09.jpg";
 
 export default function Services() {
   return (
@@ -39,7 +39,7 @@ export default function Services() {
             <ServiceBoxWrapper>
               <ServiceBox
                 icon="browser"
-                title="Treatment"
+                title="Diagnostic Info"
                 subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
               />
             </ServiceBoxWrapper>
