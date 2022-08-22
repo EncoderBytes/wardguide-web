@@ -7,7 +7,7 @@ function SvgComponent(props) {
       preserveAspectRatio="xMidYMid meet">
 
       <g transform="translate(0.000000,4500.000000) scale(0.100000,-0.100000)"
-        fill="#5149C3" stroke="none">
+        fill="#fff" stroke="none">
         <path d="M23325 42084 c-170 -19 -340 -70 -491 -148 -71 -37 -2355 -1631
         -7775 -5426 -4221 -2955 -7721 -5409 -7779 -5453 -287 -219 -641 -556 -854
         -812 -720 -864 -1142 -1869 -1256 -2990 -29 -280 -29 -777 0 -1048 93 -883
