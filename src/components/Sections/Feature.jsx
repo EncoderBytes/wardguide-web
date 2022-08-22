@@ -18,7 +18,7 @@ export default function Services() {
           <HeaderInfo>
             <h1 className="font40 extraBold">Feature of Ward Guide</h1>
             <p className="font13">
-              Some of the feature of Ward Guid are as under:
+              Consult the gold standard of Current, authentic and free clinical data
             </p>
           </HeaderInfo>
           <ServiceBoxRow className="flex">
@@ -26,28 +26,28 @@ export default function Services() {
               <ServiceBox
                 icon="roller"
                 title="Ward Protocols"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+                subtitle="Watch out for different official ward procedures."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
                 icon="monitor"
-                title="Disease Information"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+                title="Disease Info"
+                subtitle="Consult in depth and look up for infectious and Non-infectious diseases by name or system."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
                 icon="browser"
                 title="Diagnostic Info"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+                subtitle="Review history, clinical presentations and Laboratory tests to easily evaluate and interpret"
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
                 icon="printer"
                 title="Therapies"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor." />
+                subtitle="Along with Pharmacological and Non-pharmacological therapies to view empiric and more specific treatment recommendations." />
             </ServiceBoxWrapper>
           </ServiceBoxRow>
         </div>

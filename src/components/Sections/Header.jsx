@@ -17,11 +17,10 @@ export default function Header() {
           <h1 className="extraBold font60">This is Ward Guide.</h1>
           <HeaderP className="font13 semiBold">
             An instant access to evidence-based pocket guide for healthcare professionals.
-            From Ward Guide the one healthcare app, you can learn and practice to check signs
-            and symptoms, History taking, General physical examinations, Managements of Diseases
-            (including goals of the treatment), pharmacological and non-pharmacological therapies,
-            Ward protocols, Common medical and surgical emergencies, General procedures, Rational
-            use of drugs and much more.
+            From Ward Guide-the one healthcare app, you can learn and practice to check signs and symptoms,
+            History taking, General physical examinations, Managements of Diseases (including goals of the treatment),
+            pharmacological and non-pharmacological therapies, Ward protocols, Common medical and surgical emergencies,
+            General procedures, Rational use of drugs and much more.
           </HeaderP>
 
           <BtnWrapper style={{ display: 'flex' }}>

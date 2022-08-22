@@ -3,7 +3,7 @@ import styled from "styled-components";
 // Components
 import TestimonialSlider from "../Elements/TestimonialSlider";
 
-export default function Blog() {
+export default function Testimonial() {
   return (
     <Wrapper id="testimonial">
       <div className="lightBg" style={{ padding: '50px 0' }}>
@@ -11,9 +11,7 @@ export default function Blog() {
           <HeaderInfo>
             <h1 className="font40 extraBold">What They Say?</h1>
             <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-              <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
+              Free feature rich medical app with concise, well written, authentic and easy access to great knowledge hub.
             </p>
           </HeaderInfo>
           <TestimonialSlider />
