@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 // Components
-import ClientSlider from "../Elements/ClientSlider";
+// import ClientSlider from "../Elements/ClientSlider";
 import ServiceBox from "../Elements/ServiceBox";
 import FullButton from "../Buttons/FullButton";
 // Assets
@@ -12,46 +12,42 @@ import AddImage4 from "../../assets/img/add/4.png";
 
 export default function Services() {
   return (
-    <Wrapper id="services">
-      <div className="lightBg" style={{ padding: "50px 0" }}>
-        <div className="container">
-          <ClientSlider />
-        </div>
-      </div>
+    <Wrapper id="feature">
       <div className="whiteBg" style={{ padding: "60px 0" }}>
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">Our Awesome Services</h1>
+            <h1 className="font40 extraBold">Feature of Ward Guide</h1>
             <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-              <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
+              Some of the feature of Ward Guid are as under:
             </p>
           </HeaderInfo>
           <ServiceBoxRow className="flex">
             <ServiceBoxWrapper>
               <ServiceBox
                 icon="roller"
-                title="Graphic Design"
+                title="Ward Protocols"
                 subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
                 icon="monitor"
-                title="Web Design"
+                title="Disease Information"
                 subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
                 icon="browser"
-                title="Development"
+                title="Treatment"
                 subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
-              <ServiceBox icon="printer" title="Print" subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor." />
+              <ServiceBox
+                icon="printer"
+                title="Therapies"
+                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor." />
             </ServiceBoxWrapper>
           </ServiceBoxRow>
         </div>
@@ -59,13 +55,20 @@ export default function Services() {
           <div className="container">
             <Advertising className="flexSpaceCenter">
               <AddLeft>
-                <h4 className="font15 semiBold">A few words about company</h4>
-                <h2 className="font40 extraBold">A Study of Creativity</h2>
+                <h4 className="font15 semiBold">Disclaimer for Ward Guide</h4>
+                <h2 className="font40 extraBold">Disclaimer</h2>
                 <p className="font12">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-                  diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                  Information provided in Ward Guide is neither intended nor implied to substitute any professional
+                  or medical advice, and is provided purely for educational purpose only. You should not use this
+                  information to diagnose or treat any medical or health problem. Although every effort has been
+                  made to make the content easy to access in portable form and free from errors. Also, we do not
+                  provide any warranty that Ward Guide content will meet your criteria.
+                  <br />
+                  If you undertake any treatment method from this app without a registered medical professional’s
+                  supervision, solely you and entirely you will be responsible for the outcomes. Neither Ward Guide
+                  nor the organization of this App can be held responsible for your actions or any conditions resulting thereof.
                 </p>
-                <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
+                <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0" }}>
                   <div style={{ width: "190px" }}>
                     <FullButton title="Get Started" action={() => alert("clicked")} />
                   </div>
@@ -127,7 +130,7 @@ const HeaderInfo = styled.div`
 `;
 const Advertising = styled.div`
   margin: 80px 0;
-  padding: 100px 0;
+  padding: 20px 0;
   position: relative;
   @media (max-width: 1160px) {
     padding: 100px 0 40px 0;

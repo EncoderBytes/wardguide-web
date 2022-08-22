@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 // Components
-import FullButton from "../Buttons/FullButton";
+// import FullButton from "../Buttons/FullButton";
 // Assets
-import HeaderImage from "../../assets/img/header-img.png";
+import HeaderImage from "../../assets/img/Mobile-06.jpg";
+import AppStore from "../../assets/img/appstore.png";
+import PlayStore from "../../assets/img/playstore.png";
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
 
@@ -12,19 +14,33 @@ export default function Header() {
     <Wrapper id="home" className="container flexSpaceCenter">
       <LeftSide className="flexCenter">
         <div>
-          <h1 className="extraBold font60">We are Digital Agency.</h1>
+          <h1 className="extraBold font60">This is Ward Guide.</h1>
           <HeaderP className="font13 semiBold">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-            voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            An instant access to evidence-based pocket guide for healthcare professionals.
+            From Ward Guide the one healthcare app, you can learn and practice to check signs
+            and symptoms, History taking, General physical examinations, Managements of Diseases
+            (including goals of the treatment), pharmacological and non-pharmacological therapies,
+            Ward protocols, Common medical and surgical emergencies, General procedures, Rational
+            use of drugs and much more.
           </HeaderP>
-          <BtnWrapper>
-            <FullButton title="Get Started" />
+
+          <BtnWrapper style={{ display: 'flex' }}>
+            <div >
+              <a href="/" style={{ padding: "10px 14px 10px 0", fontSize: '20px' }}>
+                <Img className="radius8" src={AppStore} alt="office" style={{ zIndex: 9, width: '10rem' }} />
+              </a>
+            </div>
+            <div >
+              <a href="/" style={{ padding: "10px 14px 10px 0", fontSize: '20px' }}>
+                <Img className="radius8" src={PlayStore} alt="office" style={{ zIndex: 9, width: '10rem' }} />
+              </a>
+            </div>
           </BtnWrapper>
         </div>
       </LeftSide>
       <RightSide>
         <ImageWrapper>
-          <Img className="radius8" src={HeaderImage} alt="office" style={{zIndex: 9}} />
+          <Img className="radius8" src={HeaderImage} alt="office" style={{ zIndex: 9, width: '26rem' }} />
           <QuoteWrapper className="flexCenter darkBg radius8">
             <QuotesWrapper>
               <QuotesIcon />
@@ -33,7 +49,7 @@ export default function Header() {
               <p className="font15 whiteColor">
                 <em>Friends, such as we desire, are dreams and fables. Friendship demands the ability to do without it.</em>
               </p>
-              <p className="font13 orangeColor textRight" style={{marginTop: '10px'}}>Ralph Waldo Emerson</p>
+              <p className="font13 orangeColor textRight" style={{ marginTop: '10px' }}>Ralph Waldo Emerson</p>
             </div>
           </QuoteWrapper>
           <DotsWrapper>
