@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/wardguide-web/static/css/main.3bbff617.css",
+    "main.js": "/wardguide-web/static/js/main.d1561892.js",
+    "static/js/787.fec03637.chunk.js": "/wardguide-web/static/js/787.fec03637.chunk.js",
+    "static/media/Mobile-10.jpg": "/wardguide-web/static/media/Mobile-10.a7c02ef251bf0ba17ab0.jpg",
+    "static/media/Mobile-07.jpg": "/wardguide-web/static/media/Mobile-07.6e6341d1384fe8f98ab4.jpg",
+    "static/media/Mobile-06.jpg": "/wardguide-web/static/media/Mobile-06.b5f8c39b3733e73e60bc.jpg",
+    "static/media/Mobile-08.jpg": "/wardguide-web/static/media/Mobile-08.88fed7e1ebad0a60dc9b.jpg",
+    "static/media/Mobile-09.jpg": "/wardguide-web/static/media/Mobile-09.327b7dd2146d18e74479.jpg",
+    "static/media/logo192.png": "/wardguide-web/static/media/logo192.413f47719a2ea4a370db.png",
+    "static/media/playstore.png": "/wardguide-web/static/media/playstore.fa873223fd1a54170c22.png",
+    "static/media/appstore.png": "/wardguide-web/static/media/appstore.3eb6b6352b4599554d6f.png",
+    "static/media/slick.svg": "/wardguide-web/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/wardguide-web/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/wardguide-web/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/wardguide-web/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/wardguide-web/index.html",
+    "main.3bbff617.css.map": "/wardguide-web/static/css/main.3bbff617.css.map",
+    "main.d1561892.js.map": "/wardguide-web/static/js/main.d1561892.js.map",
+    "787.fec03637.chunk.js.map": "/wardguide-web/static/js/787.fec03637.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3bbff617.css",
+    "static/js/main.d1561892.js"
+  ]
+}
