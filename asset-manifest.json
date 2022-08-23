@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./wardguide-web/static/css/main.3bbff617.css",
-    "main.js": "./wardguide-web/static/js/main.d1561892.js",
+    "main.css": "static/css/main.3bbff617.css",
+    "main.js": "static/js/main.d1561892.js",
     "static/js/787.fec03637.chunk.js": "/wardguide-web/static/js/787.fec03637.chunk.js",
     "static/media/Mobile-10.jpg": "/wardguide-web/static/media/Mobile-10.a7c02ef251bf0ba17ab0.jpg",
     "static/media/Mobile-07.jpg": "/wardguide-web/static/media/Mobile-07.6e6341d1384fe8f98ab4.jpg",
