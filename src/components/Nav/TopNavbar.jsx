@@ -76,10 +76,10 @@ export default function TopNavbar() {
           </UlWrapper>
           <UlWrapperRight className="flexNullCenter">
             <li className="semiBold font15 pointer">
-              <a href="/" style={{ padding: "10px 14px 10px 0", fontSize: '20px' }}>
+              <a href="https://www.facebook.com/wardguide" style={{ padding: "10px 14px 10px 0", fontSize: '20px' }}>
                 <FaFacebook />
               </a>
-              <a href="/" style={{ padding: "10px 14px 10px 0", fontSize: '20px' }}>
+              <a href="https://www.linkedin.com/company/wardguide/" style={{ padding: "10px 14px 10px 0", fontSize: '20px' }}>
                 <FaLinkedin />
               </a>
               <a href="/" style={{ padding: "10px 14px 10px 0", fontSize: '20px' }}>
