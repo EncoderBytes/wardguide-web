@@ -1,158 +1,76 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 // Assets
 import ContactImg1 from "../../assets/img/logo192.png";
 import ContactImg2 from "../../assets/img/Mobile-06.jpg";
 import ContactImg3 from "../../assets/img/Mobile-10.jpg";
-import axios from 'axios';
+import emailjs from '@emailjs/browser';
 
-class App extends React.Component {
+export default function Contact() {
+  const form = useRef();
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: '',
-      email: '',
-      message: '',
-      subject: ''
-    }
-  }
-
-  handleSubmit(e) {
+  const sendEmail = (e) => {
     e.preventDefault();
-    axios({
-      method: "POST",
-      url: "http://localhost:3002/send",
-      data: this.state
-    }).then((response) => {
-      if (response.data.status === 'success') {
-        alert("Message Sent.");
-        this.resetForm()
-      } else if (response.data.status === 'fail') {
-        alert("Message failed to send.")
-      }
-    })
-  }
 
-  resetForm() {
-    this.setState({ name: '', email: '', subject: '', message: '' })
-  }
-
-  render() {
-    return (
-      <Wrapper id="contact">
-        <div className="lightBg">
-          <div className="container">
-            <HeaderInfo>
-              <h1 className="font40 extraBold">Let's get in touch</h1>
-              <p className="font13">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                <br />
-                labore et dolore magna aliquyam erat, sed diam voluptua.
-              </p>
-            </HeaderInfo>
-            <div className="row" style={{ paddingBottom: "30px" }}>
-              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <Form>
-                  <label className="font13">First name:</label>
-                  <input type="text" id="fname" name="fname" className="font20 extraBold" />y
-
-                  <label className="font13">Email:</label>
-                  <input type="text" id="email" name="email" className="font20 extraBold" />
-                  <label className="font13">Subject:</label>
-                  <input type="text" id="subject" name="subject" className="font20 extraBold" />
-                  <textarea rows="4" cols="50" type="text" id="message" name="message" className="font20 extraBold" />
-                </Form>
-                <SumbitWrapper className="flex">
-                  <ButtonInput type="submit" name="submit" value="Send Message" className="pointer animate radius8" style={{ maxWidth: "220px" }} />
-                </SumbitWrapper>
-              </div>
-              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 flex">
-                <div style={{ width: "50%" }} className="flexNullCenter flexColumn">
-                  <ContactImgBox>
-                    <img src={ContactImg1} style={{ width: '11rem' }} alt="office" className="radius6" />
-                  </ContactImgBox>
-                  <ContactImgBox>
-                    <img src={ContactImg2} style={{ width: '11rem' }} alt="office" className="radius6" />
-                  </ContactImgBox>
+    emailjs.sendForm('service_pewc65y', 'template_mkl03b8', form.current, '0ox_WIbmUQdJdNIvV')
+      .then((result) => {
+        console.log(result.text);
+        alert('Message Sent')
+      }, (error) => {
+        console.log(error.text);
+      });
+  };
+  return (
+    <Wrapper id="contact">
+      <div className="lightBg">
+        <div className="container">
+          <HeaderInfo>
+            <h1 className="font40 extraBold">Let's get in touch</h1>
+            <p className="font13">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+              <br />
+              labore et dolore magna aliquyam erat, sed diam voluptua.
+            </p>
+          </HeaderInfo>
+          <div className="row" style={{ paddingBottom: "30px" }}>
+            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <Form ref={form} onSubmit={sendEmail}>
+                <label className="font13">First name:</label>
+                <input type="text" id="fname" name="fname" className="font20 extraBold" />
+                <label className="font13">Email:</label>
+                <input type="text" id="email" name="email" className="font20 extraBold" />
+                <label className="font13">Subject:</label>
+                <input type="text" id="subject" name="subject" className="font20 extraBold" />
+                <textarea rows="4" cols="50" type="text" id="message" name="message" className="font20 extraBold" />
+                <div>
+                  <SumbitWrapper className="flex">
+                    <Button type="submit" value="Submit" className="pointer animate radius8" style={{ maxWidth: "220px" }} >Send Message</Button>
+                  </SumbitWrapper>
                 </div>
-                <div style={{ width: "50%" }}>
-                  <div style={{ marginTop: "100px" }}>
-                    <img src={ContactImg3} style={{ width: '15rem' }} alt="office" className="radius6" />
-                  </div>
+              </Form>
+
+            </div>
+            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 flex">
+              <div style={{ width: "50%" }} className="flexNullCenter flexColumn">
+                <ContactImgBox>
+                  <img src={ContactImg1} style={{ width: '11rem' }} alt="office" className="radius6" />
+                </ContactImgBox>
+                <ContactImgBox>
+                  <img src={ContactImg2} style={{ width: '11rem' }} alt="office" className="radius6" />
+                </ContactImgBox>
+              </div>
+              <div style={{ width: "50%" }}>
+                <div style={{ marginTop: "100px" }}>
+                  <img src={ContactImg3} style={{ width: '15rem' }} alt="office" className="radius6" />
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </Wrapper>
-    );
-  }
-
-  onNameChange(event) {
-    this.setState({ name: event.target.value })
-  }
-
-  onEmailChange(event) {
-    this.setState({ email: event.target.value })
-  }
-
-  onMessageChange(event) {
-    this.setState({ message: event.target.value })
-  }
+      </div>
+    </Wrapper>
+  );
 }
-
-export default App;
-
-// export default function Contact() {
-//   return (
-//     <Wrapper id="contact">
-//       <div className="lightBg">
-//         <div className="container">
-//           <HeaderInfo>
-//             <h1 className="font40 extraBold">Let's get in touch</h1>
-//             <p className="font13">
-//               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-//               <br />
-//               labore et dolore magna aliquyam erat, sed diam voluptua.
-//             </p>
-//           </HeaderInfo>
-//           <div className="row" style={{ paddingBottom: "30px" }}>
-//             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-//               <Form>
-//                 <label className="font13">First name:</label>
-//                 <input type="text" id="fname" name="fname" className="font20 extraBold" />
-//                 <label className="font13">Email:</label>
-//                 <input type="text" id="email" name="email" className="font20 extraBold" />
-//                 <label className="font13">Subject:</label>
-//                 <input type="text" id="subject" name="subject" className="font20 extraBold" />
-//                 <textarea rows="4" cols="50" type="text" id="message" name="message" className="font20 extraBold" />
-//               </Form>
-//               <SumbitWrapper className="flex">
-//                 <ButtonInput type="submit" value="Send Message" className="pointer animate radius8" style={{ maxWidth: "220px" }} />
-//               </SumbitWrapper>
-//             </div>
-//             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 flex">
-//               <div style={{ width: "50%" }} className="flexNullCenter flexColumn">
-//                 <ContactImgBox>
-//                   <img src={ContactImg1} style={{ width: '11rem' }} alt="office" className="radius6" />
-//                 </ContactImgBox>
-//                 <ContactImgBox>
-//                   <img src={ContactImg2} style={{ width: '11rem' }} alt="office" className="radius6" />
-//                 </ContactImgBox>
-//               </div>
-//               <div style={{ width: "50%" }}>
-//                 <div style={{ marginTop: "100px" }}>
-//                   <img src={ContactImg3} style={{ width: '15rem' }} alt="office" className="radius6" />
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </Wrapper>
-//   );
-// }
 
 const Wrapper = styled.section`
   width: 100%;
@@ -183,7 +101,7 @@ const Form = styled.form`
     padding: 30px 0;
   }
 `;
-const ButtonInput = styled.input`
+const Button = styled.button`
   border: 1px solid #5149C3;
   background-color: #5149C3;
   width: 100%;
