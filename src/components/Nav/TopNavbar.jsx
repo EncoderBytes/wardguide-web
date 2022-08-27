@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
+import { useNavigate } from "react-router-dom";
 // Components
 import Sidebar from "../Nav/Sidebar";
 import Backdrop from "../Elements/Backdrop";
@@ -13,6 +14,8 @@ import { FaInstagram } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
 
 export default function TopNavbar() {
+  const navigate = useNavigate();
+
   const [y, setY] = useState(window.scrollY);
   const [sidebarOpen, toggleSidebar] = useState(false);
 
@@ -22,6 +25,8 @@ export default function TopNavbar() {
       window.removeEventListener("scroll", () => setY(window.scrollY));
     };
   }, [y]);
+
+
 
 
   return (
@@ -68,7 +73,7 @@ export default function TopNavbar() {
               </Link>
             </li>
             {/* <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="pricing" spy={true} smooth={true} offset={-80}>
+              <Link activeClass="active" style={{ padding: "10px 15px" }} to="/privacy.html" spy={true} smooth={true} offset={-80}>
                 Pricing
               </Link>
             </li> */}
@@ -89,11 +94,16 @@ export default function TopNavbar() {
                 <FaTwitter />
               </a>
             </li>
-            {/* <li className="semiBold font15 pointer flexCenter">
-              <a href="#contact" className="radius8 lightBg" style={{ padding: "10px 15px" }}>
-                Get Started
-              </a>
-            </li> */}
+            <li className="semiBold font15 pointer flexCenter">
+              <button onClick={() => {
+                navigate("/Privacy")
+              }} className="radius8 " style={{ padding: "10px 15px", background: '#5149C3', color: 'white' }}>
+                Privacy Policy
+              </button>
+            </li>
+
+
+
           </UlWrapperRight>
         </NavInner>
       </Wrapper>
