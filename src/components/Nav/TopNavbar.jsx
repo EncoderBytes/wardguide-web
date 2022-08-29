@@ -74,11 +74,11 @@ export default function TopNavbar() {
                 Contact
               </Link>
             </li>
-            <li className="semiBold font15 pointer">
+            {/* <li className="semiBold font15 pointer">
               <Link activeClass="active" style={{ padding: "10px 15px" }} to="Privacy" path='/Privacy' spy={true} smooth={true} offset={-80}>
                 Pricing
               </Link>
-            </li>
+            </li> */}
 
           </UlWrapper>
           <UlWrapperRight className="flexNullCenter">
