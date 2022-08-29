@@ -25,12 +25,12 @@ export default function Header() {
 
           <BtnWrapper style={{ display: 'flex' }}>
             <div >
-              <a href="/" style={{ padding: "10px 14px 10px 0", fontSize: '20px' }}>
+              <a href="https://apps.apple.com/pk/app/ward-guide/id1641090393" style={{ padding: "10px 14px 10px 0", fontSize: '20px' }}>
                 <Img className="radius8" src={AppStore} alt="office" style={{ zIndex: 9, width: '10rem' }} />
               </a>
             </div>
             <div >
-              <a href="/" style={{ padding: "10px 14px 10px 0", fontSize: '20px' }}>
+              <a href="https://play.google.com/store/apps/details?id=com.firstaid.wardguide" style={{ padding: "10px 14px 10px 0", fontSize: '20px' }}>
                 <Img className="radius8" src={PlayStore} alt="office" style={{ zIndex: 9, width: '10rem' }} />
               </a>
             </div>

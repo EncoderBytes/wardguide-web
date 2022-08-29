@@ -2,7 +2,7 @@ import React from "react";
 export default function Sidebar({ privacyOpen, togglePrivacy }) {
     return (
         <>
-            <div>
+            <div id="Privacy">
                 <strong>Privacy Policy</strong>
                 <p>
                     Mian Jawad Ahmad built the Ward Guide app as

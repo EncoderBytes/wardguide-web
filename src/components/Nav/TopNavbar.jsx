@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+// import createBrowserHistory from 'history/createBrowserHistory';
 // Components
 import Sidebar from "../Nav/Sidebar";
 import Backdrop from "../Elements/Backdrop";
+// import Privacy from '../Sections/Privacy'
 // Assets
 import LogoIcon from "../../assets/svg/Logo";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
@@ -14,8 +16,8 @@ import { FaInstagram } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
 
 export default function TopNavbar() {
-  const navigate = useNavigate();
-
+  // const navigate = useNavigate();
+  // const history = createBrowserHistory({ forceRefresh: true });
   const [y, setY] = useState(window.scrollY);
   const [sidebarOpen, toggleSidebar] = useState(false);
 
@@ -72,11 +74,11 @@ export default function TopNavbar() {
                 Contact
               </Link>
             </li>
-            {/* <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="/privacy.html" spy={true} smooth={true} offset={-80}>
+            <li className="semiBold font15 pointer">
+              <Link activeClass="active" style={{ padding: "10px 15px" }} to="Privacy" path='/Privacy' spy={true} smooth={true} offset={-80}>
                 Pricing
               </Link>
-            </li> */}
+            </li>
 
           </UlWrapper>
           <UlWrapperRight className="flexNullCenter">
@@ -95,11 +97,14 @@ export default function TopNavbar() {
               </a>
             </li>
             <li className="semiBold font15 pointer flexCenter">
-              <button onClick={() => {
-                navigate("/Privacy")
+              {/* <button type='sumbit' onClick={() => {
+
+                navigate("/Privacy");
+                // history.push('/Privacy');
+                // Component({ Privacy })
               }} className="radius8 " style={{ padding: "10px 15px", background: '#5149C3', color: 'white' }}>
                 Privacy Policy
-              </button>
+              </button> */}
             </li>
 
 
